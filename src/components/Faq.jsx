@@ -95,7 +95,7 @@ const FaqContainer = styled.section`
   }
 
   .faq-item {
-    border-bottom: 1px solid var(--black-color);
+    border-bottom: 1px solid #272929;
     padding: 1.5rem 0;
     width: 100%;
   }
@@ -115,16 +115,13 @@ const FaqContainer = styled.section`
 
   .answer {
     padding: 0.5rem 0;
+    color: #272929;
   }
 
   span {
     font-size: 1.5rem;
     font-weight: bold;
     transition: transform 0.2s;
-  }
-
-  .faq-heading:hover span {
-    transform: scale(1.2);
   }
 
   @media (max-width: 850px) {

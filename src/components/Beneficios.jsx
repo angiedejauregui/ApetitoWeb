@@ -1,5 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import encuentran from '../assets/beneficios/encuentran.gif'
+import reservas from '../assets/beneficios/reservas.gif'
+import h from '../assets/beneficios/24h.gif'
+import destacar from '../assets/beneficios/destacar.gif'
+import fidelizacion from '../assets/beneficios/fidelizacion.gif'
+import clientes from '../assets/beneficios/masClientes.gif'
 
 const Beneficios = () => {
   return (
@@ -7,6 +13,7 @@ const Beneficios = () => {
       <h2>¿Cómo puede ayudarte una pagina web?</h2>
       <div className="items">
         <div>
+        <img src={encuentran} alt="Lupa" />
           <h3>Más Gente te Encuentra</h3>
           <p>
              Hoy en día, la mayoría de las personas buscan en Google antes de
@@ -15,6 +22,7 @@ const Beneficios = () => {
           </p>
         </div>
         <div>
+        <img src={reservas} alt="Calendario" />
           <h3>Reservas sin pérdidas</h3>
           <p>
             Olvídate de las llamadas y de los "no shows". Con un sistema de
@@ -23,6 +31,7 @@ const Beneficios = () => {
           </p>
         </div>
         <div>
+        <img src={h} alt="Reloj" />
           <h3>Tu Restaurante Abierto las 24/7</h3>
           <p>
             Aunque tu restaurante esté cerrado, tu página está siempre abierta.
@@ -31,6 +40,7 @@ const Beneficios = () => {
           </p>
         </div>
         <div>
+        <img src={destacar} alt="Rayo" />
           <h3>Te Destacas de la Competencia</h3>
           <p>
             Con tantas opciones ahí fuera, una página web bien diseñada puede
@@ -39,6 +49,7 @@ const Beneficios = () => {
           </p>
         </div>
         <div>
+        <img src={clientes} alt="Flecha para arriba" />
           <h3>Atraes Más Clientes</h3>
           <p>
             Una web atractiva despierta el deseo de visitar tu restaurante desde
@@ -47,6 +58,7 @@ const Beneficios = () => {
           </p>
         </div>
         <div>
+        <img src={fidelizacion} alt="" />
           <h3>Fidelización de Clientes</h3>
           <p>
             Ofrece contenido exclusivo, promociones y noticias a través de tu
@@ -69,20 +81,23 @@ const BeneficiosContainer = styled.section`
   background-color: var(--secondary-color);
 
   .items {
-    margin: 4rem;
+    margin: 4rem 0rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     text-align: start;
 
+    
     div {
-      padding: 2rem 2rem 2rem;
+      padding: 1rem 2rem 2rem;
       border-radius: 1rem;
       border: 1px solid #1c2806;
       min-height: 12rem;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 
       img {
-        width: 3rem;
+        width: 2.5rem;
+        margin-bottom: 0.5rem;
       }
 
       h3 {
@@ -113,6 +128,7 @@ const BeneficiosContainer = styled.section`
     .items {
         grid-template-columns: 1fr;
         margin: 4rem 0;
+        gap: 2rem;
     }
   }
 `;

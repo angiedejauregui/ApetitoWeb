@@ -59,9 +59,11 @@ const TestimoniosContainer = styled.section`
       width: 10rem;
       height: 15rem;
       border-radius: 2rem;
+      color: #272929;
       
       .name {
         margin: 1rem;
+        color: #1a1b1b;
       }
     }
 

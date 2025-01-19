@@ -4,7 +4,7 @@ import styled from "styled-components";
 function Footer(props) {
   return (
     <FooterContainer>
-      <p>2025 &copy; Apetito Web</p>
+      <p>Copyright &copy; 2025 Apetito Web</p>
     </FooterContainer>
   );
 }
@@ -16,4 +16,8 @@ const FooterContainer = styled.footer`
   display: flex;
   justify-content: center;
   padding-bottom: 2rem;
+
+  p {
+    font-size: 1rem;
+  }
 `;
