@@ -49,6 +49,7 @@ const HomeContariner = styled.section`
 
   button {
     background-color: var(--secondary-color);
+    color: var(--black-color);
   }
 
   @media (max-width: 900px) {
