@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"; 
 import Slider from "react-slick";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Testimonios = () => {
+  useEffect(() => {
+      AOS.init({ duration: 2000 });
+    }, []);
+
   let settings = {
     dots: false,
     infinite: true,
@@ -12,10 +18,11 @@ const Testimonios = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
     <TestimoniosContainer>
       <h2>Lo que dicen nuestros clientes</h2>
-      <div className="slider-container">
+      <div className="slider-container" data-aos="fade-up">
       <Slider {...settings}>
         <div className="texto">
           <p>

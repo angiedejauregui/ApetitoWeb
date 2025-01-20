@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import fondo from "../assets/fondo.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+  useEffect(() => {
+      AOS.init({ duration: 2000 });
+    }, []);
+
   return (
-    <HomeContariner>
+    <HomeContariner ata-aos="fade-up">
       <h1>
         Imagina un sitio web que haga que todos quieran visitar tu restaurante
       </h1>

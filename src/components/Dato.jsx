@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 const Dato = () => {
+  useEffect(() => {
+      Aos.init({ duration: 2000 });
+    }, []);
+
   return (
     <DatoContainer>
+      <div ata-aos="fade-up">
+
       <h2>Tu restaurante merece ser el primero en la mente de tus clientes</h2>
       <p>
         En un mundo lleno de opciones gastronómicas, ¿cómo logras destacar? La
@@ -12,6 +21,7 @@ const Dato = () => {
         no tiene una página web atractiva o no se distingue entre la
         competencia, ¡estás perdiendo clientes!
       </p>
+      </div>
     </DatoContainer>
   );
 };

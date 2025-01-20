@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const dataCollection = [
   {
@@ -27,6 +29,10 @@ const dataCollection = [
 const Faq = () => {
   const [activeFaq, setActiveFaq] = useState(null);
 
+  useEffect(() => {
+        AOS.init({ duration: 2000 });
+      }, []);
+
   const toggleFaq = (index) => {
     setActiveFaq(activeFaq === index ? null : index);
   };
@@ -34,9 +40,9 @@ const Faq = () => {
   return (
     <FaqContainer>
       <div className="faq-title">
-        <h2>Preguntas Frecuentes</h2>
+        <h2 data-aos="fade-up">Preguntas Frecuentes</h2>
       </div>
-      <div className="faq">
+      <div className="faq" data-aos="fade-up">
         {dataCollection.map((item, index) => (
           <div key={index} className="faq-item">
             <div className="faq-heading" onClick={() => toggleFaq(index)}>

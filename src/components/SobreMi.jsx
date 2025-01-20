@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import foto from "../assets/fotoSobreMi.webp";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const SobreMi = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
     <SobreMiContainer>
-      <img src={foto} alt="Foto de perfil" />
-      <div>
+      <img src={foto} alt="Foto de perfil" data-aos="fade-up" />
+      <div data-aos="fade-up">
         <h2>Mi Misión: Hacer que Tu Restaurante Llene Sus Mesas</h2>
         <p>
           Mi pasión por la tecnología y el explorar la gastronomía se
@@ -28,7 +34,7 @@ const SobreMi = () => {
 export default SobreMi;
 
 const SobreMiContainer = styled.section`
-  padding: 6rem;
+  padding: 6rem 6rem 1rem 6rem;
   display: flex;
   gap: 5rem;
   text-align: start;
@@ -55,7 +61,7 @@ const SobreMiContainer = styled.section`
 
   @media (max-width: 900px) {
     flex-direction: column;
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 0rem 2rem;
     gap: 3rem;
 
     img {

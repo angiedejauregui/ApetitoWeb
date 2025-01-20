@@ -15,7 +15,9 @@ function App() {
      <Home />
      <Dato />
      <SobreMi />
+     <section className="curved-sobreMi"></section>
      <Beneficios />
+     <section className="curved-beneficios"></section>
      <Testimonios />
      <Llamada />
      <Faq />
