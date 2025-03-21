@@ -1,4 +1,3 @@
-import './App.css'
 import Beneficios from './components/Beneficios'
 import Dato from './components/Dato'
 import Faq from './components/Faq'
